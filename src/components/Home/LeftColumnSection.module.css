@@ -1,0 +1,45 @@
+.columnWrapper{
+    width: 100vw;
+    height: 100vh;
+    padding: 5vw 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1290px;
+}
+
+.gridContainer h1{
+    font-size: 3.2rem;
+    font-weight: 100;
+    line-height: 1.2;
+    color: var(--primary-foreground);
+    text-transform: uppercase;
+    margin-top: 5rem;
+}
+
+.gridContainer p{
+    margin-bottom: 2rem;
+    font-weight: 100;
+}
+
+.columnText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+}
+
+.linePath{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}

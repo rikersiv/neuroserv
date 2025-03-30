@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 
-function Header({ filter = styles.blue_filter }) {
+function Header({ iswhite, logoRef, menuIconRef }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef(null);
     const socials = [
@@ -35,8 +35,8 @@ function Header({ filter = styles.blue_filter }) {
     return (
         <>
             <div className={styles.header}>
-                <Image src="/assets/images/icons/logo_full.svg" className={filter} alt="logo" width={150} height={50} />
-                <Image src="/assets/images/icons/menu.svg" className={filter} alt="menu" width={30} height={30} onClick = {() => setMenuOpen(true)}/>
+                <Image ref={logoRef} src="/assets/images/icons/logo_full.svg" className={`${styles.logo} ${iswhite ? 'filter' : ''}`} alt="logo" width={150} height={50} />
+                <Image ref={menuIconRef} src="/assets/images/icons/menu.svg" className={`${styles.menuIcon} ${iswhite ? 'filter' : ''}`} alt="menu" width={30} height={30} onClick = {() => setMenuOpen(true)}/>
             </div>
 
             <div className={styles.menu} ref={menuRef}>
