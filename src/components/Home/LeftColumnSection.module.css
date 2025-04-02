@@ -12,6 +12,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1290px;
+    align-items: center;
+    position: relative;
 }
 
 .gridContainer h1{
@@ -33,7 +35,29 @@
     flex-direction: column;
     justify-content: space-between;
     width: 80%;
+    height: 100%;
     margin-left: auto;
+}
+
+.columnImage {
+    position: relative;
+    overflow: hidden;
+    width: 71%; 
+    height: 100%; 
+  }
+  
+  .imageContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140%; 
+    height: 100%;
+  }
+
+.columnImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .linePath{
@@ -42,4 +66,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    top: 0;
+    z-index: 2;
 }
