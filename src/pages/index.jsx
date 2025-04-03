@@ -9,12 +9,14 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import parse from "html-react-parser";
 import Button from "@/components/CTAs/Button";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 function Home() {
   const logoRef = useRef(null);
   const menuIconRef = useRef(null);
   const bannerContentRef = useRef(null);
   useLogoAnimation(logoRef, menuIconRef, bannerContentRef);
+  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs, videoRef, overlayRef } = useScrollAnimation();
 
   const offers = [
     {
@@ -71,16 +73,17 @@ function Home() {
         iswhite={true}
         isButtonWhite={false}
         buttonText="Contact Us"
+        zindex={1}
       />
 
-      <div className={styles.gridContainer}>
+      <div ref={sectionRef} className={styles.gridContainer}>
         <div className={styles.grid}>
           <div>
-            <Image src="/assets/images/icons/logo.svg" alt="logo" width={50} height={50} />
-            <h1>What We Offer Innovation Redefined</h1>
+            <Image ref={gridLogoRef} src="/assets/images/icons/logo.svg" alt="logo" width={50} height={50} />
+            <h1 ref={textRef}>What We Offer Innovation Redefined</h1>
           </div>
           {offers.map((offer, index) => (
-            <div key={index} className={styles.offerCard}>
+            <div key={index} ref={(el) => (offerRefs.current[index] = el)} className={styles.offerCard}>
               <Image src={offer.bgImge} className={styles.gridBg} alt="offer" width={450} height={400} />
               <div className={styles.offerOverlay}></div>
               <div className={styles.offerContent}>
@@ -95,16 +98,17 @@ function Home() {
       <RightColumnSection
         text="Aezonia - The Future of Cognitive Gaming"
         description="✔ An immersive experience blending entertainment with neuroscience-backed cognitive training.<br/>✔ Enhances mindfulness, decision-making, and focus through adaptive AI."
-        imgSrc={"/assets/images/Home/image2.jpg"}
+        videoSrc="/assets/images/Home/aezonia.mp4"
         iswhite={true}
         isButtonWhite={false}
         buttonText="Know Us More"
+        zindex={3}
       />
 
-      <div className={styles.aboutGridContainer}>
+      <div ref={aboutSecRef} className={styles.aboutGridContainer}>
         <div className={styles.aboutGrid}>
           {aboutContent.map((content, index) => (
-            <div key={index} className={styles.aboutCard}>
+            <div key={index} ref={(el) => (aboutRefs.current[index] = el)} className={styles.aboutCard}>
               <Image src={content.icon} alt="icon" width={100} height={100} />
               <div>
                 <h2>{parse(content.title)}</h2>
@@ -115,18 +119,18 @@ function Home() {
         </div>
       </div>
 
-      <div className={styles.homeBottom}>
+      <div ref={videoRef}  className={styles.homeBottom}>
         <video className={styles.video} autoPlay loop muted>
           <source src="/assets/images/Home/collaboration.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className={styles.bottomOverlay}>
-        </div>
-        <div className={styles.bottomContent}>
+      </div>
+      <div ref={overlayRef} className={styles.bottomOverlay}>
+          <div className={styles.bottomContent}>
             <h1>Join Us in Shaping the Future of NeuroTechnology</h1>
             <Button text="Collaborate with neuraserv" arrowSrc="/assets/images/icons/arrow_left.svg" href="/" isWhite={true} />
           </div>
-      </div>
+        </div>
       <Footer />
     </div>
   );

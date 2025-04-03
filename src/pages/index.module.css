@@ -7,6 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .grid{
@@ -89,6 +91,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 4;
 }
 
 .aboutGrid{
@@ -139,6 +143,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 5;
 }
 
 .video{
@@ -149,17 +154,16 @@
 }
 
 .bottomOverlay{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    opacity: 0.7;
-    z-index: 2;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    z-index: 6;
 }
 
 .bottomContent{

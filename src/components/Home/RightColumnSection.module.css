@@ -27,10 +27,20 @@
     font-weight: 100;
 }
 
-.columnImage{
-    width: 90%;
-    margin-left: auto;
+.imageContainer {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.image, .media {
+    width: 81%;
     height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .columnText{
@@ -47,4 +57,5 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    z-index: 2;
 }

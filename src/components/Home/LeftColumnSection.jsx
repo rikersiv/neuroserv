@@ -78,6 +78,13 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
             });
         });
 
+        ScrollTrigger.create({
+            trigger: section,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+
     }, []);
 
     return (
