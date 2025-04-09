@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText }) {
+function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText, zindex }) {
     const sectionRef = useRef(null);
     const logoRef = useRef(null);
     const lineRef = useRef(null);
@@ -88,7 +88,7 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
     }, []);
 
     return (
-        <div ref={sectionRef} className={`${styles.columnWrapper} ${iswhite ? 'white' : 'blue'}`}>
+        <div ref={sectionRef} className={`${styles.columnWrapper} ${iswhite ? 'white' : 'blue'}`} style={{ zIndex: zindex }}>
             <div className={styles.gridContainer}>
                 <div className={styles.columnText}>
                     <div className={styles.linePath}>

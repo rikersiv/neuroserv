@@ -95,11 +95,11 @@ const useScrollAnimation = () => {
         });
 
         ScrollTrigger.create({
-            trigger: video,        // Element to pin
-            start: "top top",      // Start pinning when video hits top of viewport
-            endTrigger: overlay,   // Use overlay as reference for end point
-            end: "bottom top",     // End pinning when overlay's BOTTOM hits TOP of viewport
-            pin: true,             // Enable pinning
+            trigger: video,        
+            start: "top top",      
+            endTrigger: overlay,   
+            end: "bottom top",     
+            pin: true,            
             pinSpacing: false
           });
 

@@ -51,8 +51,8 @@ function Header({ iswhite, logoRef, menuIconRef }) {
                     </div>
                     <div>
                         <Link href="/">Home</Link>
-                        <Link href="/">Know Us</Link>
-                        <Link href="/">Solutions</Link>
+                        <Link href="/about">Know Us</Link>
+                        <Link href="/solutions">Solutions</Link>
                         <Link href="/">News</Link>
                     </div>
                 </div>

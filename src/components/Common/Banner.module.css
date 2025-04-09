@@ -1,0 +1,90 @@
+.banner{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bannerContent{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: -1;
+}
+
+.bannerContent h1{
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 1;
+    y: 0;
+}
+
+.overlayImage{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 75%;
+    z-index: 1;
+}
+
+.overlayImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.quoteContainer{
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.quoteContainer{
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1290px;
+}
+
+.quoteText{
+    color: var(--primary-foreground);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    width: 70%;
+}
+
+.quoteAuthor{
+    color: var(--primary-foreground);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: 70%;
+}
