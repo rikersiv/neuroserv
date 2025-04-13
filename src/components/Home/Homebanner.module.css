@@ -1,0 +1,39 @@
+.homebanner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.bannerlogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.bannerContent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2vw 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--primary-foreground);
+}
+
+.bannerContent h4{
+    width: 35%;
+    text-align: left;
+    text-transform: uppercase;
+}
