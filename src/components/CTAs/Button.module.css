@@ -25,6 +25,10 @@
     color: var(--primary-foreground);
 }
 
+.arrowContainer{
+    padding: 1px;
+}
+
 .blueButton:hover .arrowContainer{
     background-color: var(--primary-foreground);
     border-radius: 50%;

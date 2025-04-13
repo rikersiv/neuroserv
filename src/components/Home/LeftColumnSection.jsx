@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText }) {
+function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText, buttonHref, zindex }) {
     const sectionRef = useRef(null);
     const logoRef = useRef(null);
     const lineRef = useRef(null);
@@ -88,7 +88,7 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
     }, []);
 
     return (
-        <div ref={sectionRef} className={`${styles.columnWrapper} ${iswhite ? 'white' : 'blue'}`}>
+        <div ref={sectionRef} className={`${styles.columnWrapper} ${iswhite ? 'white' : 'blue'}`} style={{ zIndex: zindex }}>
             <div className={styles.gridContainer}>
                 <div className={styles.columnText}>
                     <div className={styles.linePath}>
@@ -100,7 +100,7 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
                     <h1 ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'white' : 'blue'}`}>{text}</h1>
                     <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'white' : 'blue'}`}>{description}</p>
                     <div ref={(el) => textRefs.current.push(el)}>
-                        <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href="/get-started" isWhite={isButtonWhite} />
+                        <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
                     </div>
                 </div>
                 <div className={styles.columnImage} ref={imageRef}>
