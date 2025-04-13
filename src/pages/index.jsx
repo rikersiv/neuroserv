@@ -10,13 +10,14 @@ import Image from "next/image";
 import parse from "html-react-parser";
 import Button from "@/components/CTAs/Button";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+import NewsList from "@/components/News/NewsList";
 
 function Home() {
   const logoRef = useRef(null);
   const menuIconRef = useRef(null);
   const bannerContentRef = useRef(null);
   useLogoAnimation(logoRef, menuIconRef, bannerContentRef);
-  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs, videoRef, overlayRef } = useScrollAnimation();
+  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs, videoRef, overlayRef, newsHeaderRef, newsButtonRef, newsSectionRef, newsListRef } = useScrollAnimation();
 
   const offers = [
     {
@@ -64,16 +65,19 @@ function Home() {
         imgSrc={"/assets/images/Home/image1.jpg"}
         iswhite={false}
         isButtonWhite={true}
+        buttonHref="/solutions"
         buttonText="Learn More"
+        zindex={1}
       />
       <RightColumnSection
         text="Performance Unlocked"
-        description="✔ AI-Powered Adaptive Intelligence for real-time personalized experiences.<br/>✔ Clinically Validated Cognitive Gains based on leading neuroscience research.<br/>✔ Immersive Gamified Learning for enhanced mental well-being."
+        description="<br/><br/><strong>AI-Powered</strong> Adaptive Intelligence for real-time personalized experiences.<br/><br/><strong>Clinically Validated Cognitive</strong> Gains based on leading neuroscience research.<br/><br/><strong>Immersive Gamified Learning</strong> for enhanced mental well-being."
         imgSrc={"/assets/images/Home/image2.jpg"}
         iswhite={true}
         isButtonWhite={false}
+        buttonHref="/contact"
         buttonText="Contact Us"
-        zindex={1}
+        zindex={2}
       />
 
       <div ref={sectionRef} className={styles.gridContainer}>
@@ -97,10 +101,11 @@ function Home() {
 
       <RightColumnSection
         text="Aezonia - The Future of Cognitive Gaming"
-        description="✔ An immersive experience blending entertainment with neuroscience-backed cognitive training.<br/>✔ Enhances mindfulness, decision-making, and focus through adaptive AI."
-        videoSrc="/assets/images/Home/aezonia.mp4"
+        description="<br/><br/>An immersive experience blending entertainment with neuroscience-backed cognitive training.<br/><br/>Enhances mindfulness, decision-making, and focus through adaptive AI."
+        imgSrc={"/assets/images/Home/aezonia.png"}
         iswhite={true}
         isButtonWhite={false}
+        buttonHref="/about"
         buttonText="Know Us More"
         zindex={3}
       />
@@ -119,18 +124,34 @@ function Home() {
         </div>
       </div>
 
-      <div ref={videoRef}  className={styles.homeBottom}>
+      <div ref={videoRef} className={styles.homeBottom}>
         <video className={styles.video} autoPlay loop muted>
           <source src="/assets/images/Home/collaboration.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <div ref={overlayRef} className={styles.bottomOverlay}>
-          <div className={styles.bottomContent}>
-            <h1>Join Us in Shaping the Future of NeuroTechnology</h1>
-            <Button text="Collaborate with neuraserv" arrowSrc="/assets/images/icons/arrow_left.svg" href="/" isWhite={true} />
+        <div className={styles.bottomContent}>
+          <h1>Join Us in Shaping the Future of NeuroTechnology</h1>
+          <Button text="Collaborate with neuraserv" arrowSrc="/assets/images/icons/arrow_left.svg" href="/contact" isWhite={true} />
+        </div>
+      </div>
+
+      <div className={styles.newsContainer} ref={newsSectionRef}>
+
+        <Image src="/assets/images/icons/logo_outline.svg" alt="logo" width={500} height={800} className={styles.logoOutline} />
+        <div className={styles.newsWrapper}>
+          <div className={styles.header}>
+            <h2 ref={newsHeaderRef}>Latest News</h2>
+            <div ref={newsButtonRef}>
+              <Button text="See All" arrowSrc="/assets/images/icons/arrow_left.svg" href="/news" isWhite={false} />
+            </div>
+          </div>
+          <div ref={newsListRef}>
+            <NewsList />
           </div>
         </div>
+      </div>
       <Footer />
     </div>
   );

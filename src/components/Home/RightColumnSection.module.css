@@ -12,6 +12,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1290px;
+    position: relative;
 }
 
 .gridContainer h1{
@@ -52,7 +53,7 @@
 
 .linePath{
     position: absolute;
-    left: 16%;
+    left: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;

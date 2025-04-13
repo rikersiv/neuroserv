@@ -27,16 +27,17 @@ function Header({ iswhite, logoRef, menuIconRef }) {
 
     useEffect(() => {
         if (menuOpen) {
-          gsap.to(menuRef.current, { display: 'flex', opacity: 1, duration: 0.5, ease: "power2.out" });
+            gsap.to(menuRef.current, { display: 'flex', opacity: 1, duration: 0.5, ease: "power2.out" });
         } else {
-          gsap.to(menuRef.current, { opacity: 0, display: 'none', duration: 0.5, ease: "power2.in" });
+            gsap.to(menuRef.current, { opacity: 0, display: 'none', duration: 0.5, ease: "power2.in" });
         }
-      }, [menuOpen]);
+    }, [menuOpen]);
     return (
         <>
             <div className={styles.header}>
-                <Image ref={logoRef} src="/assets/images/icons/logo_full.svg" className={`${styles.logo} ${iswhite ? 'filter' : ''}`} alt="logo" width={150} height={50} />
-                <Image ref={menuIconRef} src="/assets/images/icons/menu.svg" className={`${styles.menuIcon} ${iswhite ? 'filter' : ''}`} alt="menu" width={30} height={30} onClick = {() => setMenuOpen(true)}/>
+                <Link href="/">
+                    <Image ref={logoRef} src="/assets/images/icons/logo_full.svg" className={`${styles.logo} ${iswhite ? 'filter' : ''} ${styles.logoBlend}`} alt="logo" width={150} height={50} /></Link>
+                <Image ref={menuIconRef} src="/assets/images/icons/menu.svg" className={`${styles.menuIcon} ${iswhite ? 'filter' : ''}`} alt="menu" width={30} height={30} onClick={() => setMenuOpen(true)} />
             </div>
 
             <div className={styles.menu} ref={menuRef}>
@@ -47,13 +48,13 @@ function Header({ iswhite, logoRef, menuIconRef }) {
 
                 <div className={styles.menu_items}>
                     <div>
-                        <Link href="/">Contact</Link>
+                        <Link href="/contact">Contact</Link>
                     </div>
                     <div>
                         <Link href="/">Home</Link>
                         <Link href="/about">Know Us</Link>
                         <Link href="/solutions">Solutions</Link>
-                        <Link href="/">News</Link>
+                        <Link href="/news">News</Link>
                     </div>
                 </div>
 

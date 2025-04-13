@@ -21,6 +21,7 @@ function solutions() {
                 imgSrc={"/assets/images/common/brain-scan.jpg"}
                 iswhite={false}
                 isButtonWhite={true}
+                buttonHref="/contact"
                 buttonText="Get in Touch"
                 zindex={4}
             />

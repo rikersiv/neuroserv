@@ -8,9 +8,11 @@ function Button({ text, arrowSrc, href, isWhite }) {
         <Link href={href} className={styles.link}>
             <button className={`${isWhite ? styles.whiteButton : styles.blueButton}  ${styles.button}`}>
                 {text}
-                <div className={styles.arrowContainer}>
-                    <Image src={arrowSrc} className={isWhite ? '' : 'whiteFilter'} alt="arrow" width={20} height={20} />
-                </div>
+                {arrowSrc &&
+                    <div className={styles.arrowContainer}>
+                        <Image src={arrowSrc} className={isWhite ? '' : 'whiteFilter'} alt="arrow" width={20} height={20} />
+                    </div>
+                }
             </button>
         </Link>
     );
