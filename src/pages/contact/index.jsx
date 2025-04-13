@@ -1,13 +1,12 @@
 import Header from "@/Layout/Header";
 import React from "react";
 import styles from "./index.module.css";
-import NewsList from "@/components/News/newsList";
 import Button from "@/components/CTAs/Button";
 import Footer from "@/Layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-function News() {
+function Contact() {
     return (
         <div>
             <Header iswhite={false} />
@@ -86,4 +85,4 @@ function News() {
     )
 }
 
-export default News;
+export default Contact;
