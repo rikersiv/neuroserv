@@ -15,7 +15,7 @@ const HomeBanner = ({ bannerContentRef }) => {
       {/* <Image ref={logoRef} src="/assets/images/icons/logo_full.svg" alt="Logo" className={styles.bannerlogo} width={150} height={50} /> */}
       <div ref={bannerContentRef} className={styles.bannerContent}>
         <h4>
-          Expanding Human Potential With AI & Neuroscience
+        Immersive Bio-adaptive Gaming Experiences Unlocking the Future of Human Potential 
         </h4>
 
         <Button arrowSrc="/assets/images/icons/arrow_left.svg" text="Discover neuraserv" href="/" isWhite={true} />

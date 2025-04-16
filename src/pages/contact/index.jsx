@@ -16,7 +16,7 @@ function Contact() {
                     <h2>Contact Us</h2>
                     <p>Every day is another opportunity to achieve excellence. Let&apos;s Build the Future Together.</p>
                     <div className={styles.contactFormContainer}>
-                        <Image className={styles.formBg} src="/assets/images/common/contact_bg.jpg" alt="contact" width={500} height={800} />
+                        <Image className={styles.formBg} src="/assets/images/Common/contact_bg.jpg" alt="contact" width={500} height={800} />
                         <div className={styles.overlay}></div>
                         <div className={styles.contactInfo}>
                             <div>

@@ -23,44 +23,44 @@ function Home() {
     {
       title: "Gamified Learning",
       description: "Engaging tools designed to activate neural pathways through play.",
-      bgImge: "/assets/images/home/image3.jpg",
+      bgImge: "/assets/images/Home/image3.jpg",
     },
     {
       title: "Cognitive Enhancement",
       description: "Making mental well-being more effective and accessible.",
-      bgImge: "/assets/images/home/image4.jpg",
+      bgImge: "/assets/images/Home/image4.jpg",
     },
     {
       title: "Wellness Optimization",
-      description: "Transforming workplace productivity through neuroscience.",
-      bgImge: "/assets/images/home/image5.jpg",
+      description: "Transforming Wellness and Performance Through Neuroscience.",
+      bgImge: "/assets/images/Home/image5.jpg",
     }
   ]
 
   const aboutContent = [
     {
-      icon: "/assets/images/home/brain.gif",
+      icon: "/assets/images/Home/brain.gif",
       title: "<strong>20</strong><small>years</small>",
-      smalltext: "of neuroscience",
+      smalltext: "of advanced neuroscience & gamification",
     },
     {
-      icon: "/assets/images/home/ai.gif",
+      icon: "/assets/images/Home/ai.gif",
       title: "AI-driven",
       smalltext: "personalization at scale",
     },
     {
-      icon: "/assets/images/home/idea.gif",
-      title: "+5",
-      smalltext: "pioneering solutions",
+      icon: "/assets/images/Home/idea.gif",
+      title: "5",
+      smalltext: "pioneering products",
     }
   ]
 
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Header logoRef={logoRef} menuIconRef={menuIconRef} />
       <HomeBanner bannerContentRef={bannerContentRef} />
       <LeftColumnSection
-        text="Intelligence & Adaptability Inspired By Nature"
+        text="Intelligence and adaptability, inspired by the boundless nature of human potential."
         description="Where cutting-edge neurotechnology meets gamification to revolutionize mental and emotional well-being."
         imgSrc={"/assets/images/Home/image1.jpg"}
         iswhite={false}
@@ -71,7 +71,7 @@ function Home() {
       />
       <RightColumnSection
         text="Performance Unlocked"
-        description="<br/><br/><strong>AI-Powered</strong> Adaptive Intelligence for real-time personalized experiences.<br/><br/><strong>Clinically Validated Cognitive</strong> Gains based on leading neuroscience research.<br/><br/><strong>Immersive Gamified Learning</strong> for enhanced mental well-being."
+        description="<br/><br/><strong>AI-Powered</strong> Bio-Adaptive For Personalized Experiences.<br/><br/><strong>Clinically Validated Cognitive</strong> Gains based on leading neuroscience research.<br/><br/><strong>Immersive Gamified Learning</strong> for enhanced mental well-being."
         imgSrc={"/assets/images/Home/image2.jpg"}
         iswhite={true}
         isButtonWhite={false}
@@ -84,7 +84,7 @@ function Home() {
         <div className={styles.grid}>
           <div>
             <Image ref={gridLogoRef} src="/assets/images/icons/logo.svg" alt="logo" width={50} height={50} />
-            <h1 ref={textRef}>What We Offer Innovation Redefined</h1>
+            <h1 ref={textRef}>Innovation Redefined</h1>
           </div>
           {offers.map((offer, index) => (
             <div key={index} ref={(el) => (offerRefs.current[index] = el)} className={styles.offerCard}>
@@ -101,7 +101,8 @@ function Home() {
 
       <RightColumnSection
         text="Aezonia - The Future of Cognitive Gaming"
-        description="<br/><br/>An immersive experience blending entertainment with neuroscience-backed cognitive training.<br/><br/>Enhances mindfulness, decision-making, and focus through adaptive AI."
+        description="<br/><br/>AImmersive Experience Blending Entertainment with Neuroscience-Backed Cognitive Training.<br/><br/>Scientifically validated to improve mindfullness, focus, stress resilience, 
+mental agility.<br/><br/>AI personalization through adventure and fun ensures every user experiences tailored cognitive improvement."
         imgSrc={"/assets/images/Home/aezonia.png"}
         iswhite={true}
         isButtonWhite={false}

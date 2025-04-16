@@ -63,27 +63,27 @@ function Team() {
         {
             name: "Nitesh Gupta",
             position: "Founder, CEO",
-            image: "/assets/images/team/1.jpg",
+            image: "/assets/images/Team/1.jpg",
         },
         {
             name: "Jeena Erthiva",
             position: "Co-Founder, COO",
-            image: "/assets/images/team/2.jpg",
+            image: "/assets/images/Team/2.jpg",
         },
         {
             name: "Christopher Naime",
             position: "Co-Founder, CTO",
-            image: "/assets/images/team/3.jpg",
+            image: "/assets/images/Team/3.jpg",
         },
         {
             name: "Anne-Sophie",
-            position: "Co-Founder, Chief Science Officer",
-            image: "/assets/images/team/4.jpg",
+            position: "CSO, Aezonia",
+            image: "/assets/images/Team/4.jpg",
         },
         {
             name: "Mike Luard",
             position: "Lead 3D Artist",
-            image: "/assets/images/team/5.jpg",
+            image: "/assets/images/Team/5.jpg",
         }
     ]
     return (
