@@ -4,18 +4,12 @@
     top: 2.5rem;
 }
 
-.menuIcon{
-    position: fixed;
-    right: 8vw;
-    top: 2.5rem;
-}
-
 .logoBlend {
     mix-blend-mode: difference;
   }
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 1000;
     width: 100%;

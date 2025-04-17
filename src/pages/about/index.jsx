@@ -206,7 +206,7 @@ function About() {
     ]
     return (
         <div style={{ overflowX: "hidden" }}>
-            <Header />
+            {/* <Header /> */}
             <Banner bgPath='pretty-macro-blue-flower.jpg'
                 overlayPath={'full-frame-shot-plants.jpg'}
                 title={'Merging Nature, Science, & Technology'}
