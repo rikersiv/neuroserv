@@ -60,7 +60,7 @@ function Header({ iswhite, logoRef, menuIconRef }) {
 
                 <div className={styles.menu_footer}>
                     <div>
-                        <p>ENGLISH / <small>OTHER</small></p>
+                        {/* <p>ENGLISH / <small>OTHER</small></p> */}
                     </div>
                     <div className={styles.socials}>
                         {socials.map((social, index) => (

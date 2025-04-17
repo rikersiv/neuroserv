@@ -93,8 +93,8 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
                 <div className={styles.columnText}>
                     <div className={styles.linePath}>
                         <Image ref={logoRef} src="/assets/images/icons/logo.svg" alt="Logo" width={50} height={50} className={`${iswhite ? 'filter' : ''}`} />
-                        <svg ref={lineRef} className={`${styles.line} ${iswhite ? styles.filter : ''}`} width="58.4rem" height="5" viewBox="0 0 58.4rem 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="0.5" x2="58.4rem" y2="0.5" stroke={iswhite ? "#1a6393" : "#ffffff"} strokeWidth="5" />
+                        <svg ref={lineRef} className={`${styles.line} ${iswhite ? styles.filter : ''}`} width="58.4em" height="5" viewBox="0 0 58.4em 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="0.5" x2="58.4em" y2="0.5" stroke={iswhite ? "#1a6393" : "#ffffff"} strokeWidth="5" />
                         </svg>
                     </div>
                     <h1 ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'white' : 'blue'}`}>{text}</h1>

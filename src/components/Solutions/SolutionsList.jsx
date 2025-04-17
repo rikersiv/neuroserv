@@ -10,23 +10,23 @@ const SolutionsList = () => {
     const sectionRef = useRef(null);
     const solutions = [
         {
-            title: "Neural AI Engine",
-            description: "Tracks Cognitive Performance And Adjusts In Real-Time.",
+            title: "Bio-adaptive personalization",
+            description: "Engineered for mindfulness, focus, and emotional resilience.",
             bgImage: "/assets/images/Solutions/solution1.jpg",
         },
         {
             title: "Gamified Intelligence",
-            description: "Making mental well-being more effective and accessible.",
+            description: "Redefining human potential through AI, neuroscience, and gaming.",
             bgImage: "/assets/images/home/image3.jpg",
         },
         {
-            title: "Cognitive Training Modules",
-            description: "Transforming workplace productivity through neuroscience.",
+            title: "Multi-industry applications",
+            description: "Consumer wellness, corporate performance, education.",
             bgImage: "/assets/images/home/image3.jpg",
         },
         {
-            title: "Enterprise Intelligence Systems",
-            description: "Unlocking the potential of data for cognitive enhancement.",
+            title: "Continuous testing",
+            description: "Through gameplay provided unmatched AI model performance.",
             bgImage: "/assets/images/home/image3.jpg",
         },
     ];
@@ -45,7 +45,7 @@ const SolutionsList = () => {
     return (
         <div className={styles.container} ref={sectionRef}>
             <div className={styles.wrapper}>
-                <h2 className={styles.heading}>SOLUTIONS<br />WE OFFER</h2>
+                <h2 className={styles.heading}>OUR<br />MODEL</h2>
                 <div className={styles.grid}>
                     <div className={styles.list}>
                         <p className={styles.subheading}>Solutions We Offer:</p>

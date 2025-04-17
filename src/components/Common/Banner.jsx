@@ -68,17 +68,17 @@ function Banner({ bgPath, overlayPath, title, quote, author }) {
             trigger: quoteRef.current,
             start: "top top",
             pin: true,
-            pinSpacing: false
+            pinSpacing: false,
         });
     }, []);
 
     return (
         <>
-            <div ref={bannerRef} className={styles.banner} style={{ backgroundImage: `url('/assets/images/common/${bgPath}')` }}>
+            <div ref={bannerRef} className={styles.banner} style={{ backgroundImage: `url('/assets/images/Common/${bgPath}')` }}>
                 <div className={styles.bannerContent}>
                     <div className={styles.overlayImage} ref={overlayRef}>
                         <h1 ref={textRef}>{title}</h1>
-                        <Image src={`/assets/images/common/${overlayPath}`} alt="flower" width={1000} height={1000} />
+                        <Image src={`/assets/images/Common/${overlayPath}`} alt="flower" width={1000} height={1000} />
                     </div>
                 </div>
             </div>

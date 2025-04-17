@@ -7,7 +7,7 @@ import React from "react";
 
 function solutions() {
     return (
-        <div>
+        <div style={{ overflowX: "hidden" }}>
             <Header />
             <Banner bgPath='abstract-background.jpg'
                 overlayPath={'flower-background.png'}
@@ -18,7 +18,7 @@ function solutions() {
             <LeftColumnSection
                 text="Cognitive Tools Designed For Peak Performance"
                 description="Our AI-powered solutions bridge neuroscience, gamification, and real-time data analysis to enhance cognitive potential for individuals, teams, and enterprises."
-                imgSrc={"/assets/images/common/brain-scan.jpg"}
+                imgSrc={"/assets/images/Common/brain-scan.jpg"}
                 iswhite={false}
                 isButtonWhite={true}
                 buttonHref="/contact"

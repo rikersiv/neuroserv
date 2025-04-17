@@ -190,22 +190,22 @@ function About() {
     const valuesContent = [
         {
             icon: "/assets/images/icons/connection.gif",
-            title: "Interconnectivity",
-            description: "Seamlessly linking technology and human potential.",
+            title: "Human-Centered Innovation",
+            description: "We design technologies that enhance life, learning, and inner potential.",
         },
         {
             icon: "/assets/images/icons/solving-problems.gif",
-            title: "Innovation",
-            description: "Redefining cognitive science with AI-driven breakthroughs.",
+            title: "Scientific Integrity",
+            description: "Our products are rooted in validated research and measurable outcomes.",
         },
         {
             icon: "/assets/images/icons/soft-skills.gif",
-            title: "Adaptability",
-            description: "Personalization that evolves with user needs.",
+            title: "Empowerment Through Play",
+            description: "We believe immersive experiences can unlock personal and collective growth.",
         }
     ]
     return (
-        <div>
+        <div style={{ overflowX: "hidden" }}>
             <Header />
             <Banner bgPath='pretty-macro-blue-flower.jpg'
                 overlayPath={'full-frame-shot-plants.jpg'}
@@ -214,9 +214,9 @@ function About() {
                 author={"PLUTARCH"}
             />
             <LeftColumnSection
-                text="Inspired by Nature, Powered by AI"
+                text="Nature-Inspired. Human-Powered. Fueled by Potential."
                 description="Just like the octopus, a symbol of intelligence and adaptability, Neuraserv combines neuroscience and artificial intelligence to unlock the vast potential of the human mind."
-                imgSrc={"/assets/images/common/octopus.jpg"}
+                imgSrc={"/assets/images/Common/octopus.jpg"}
                 iswhite={true}
                 isButtonWhite={false}
                 buttonHref="/contact"
@@ -235,13 +235,13 @@ function About() {
                 <div className={styles.missionVisionWrapper}>
                     <div className={styles.missionContent}>
                         <h4 ref={titleRefMission}>Our Mission</h4>
-                        <p ref={textRefMission}>Empowering individuals and organizations to achieve cognitive <span>Evolution through cutting-edge technology.</span></p>
+                        <p ref={textRefMission}>To deliver immersive, bio-adaptive gaming to enhance focus, resilience, and human potential through neuroscience and AI.</p>
                     </div>
                     <div className={styles.visionContent}>
                         <h4 ref={titleRefVision}>Our Vision</h4>
-                        <p ref={textRefVision}>To be the global leader <span>in neuro-enhancement, revolutionizing learning, adaptability, and personal growth.</span></p>
+                        <p ref={textRefVision}>To lead the future of cognitive evolution by revolutionizing learning, adaptability, and growth through neurotechnology and gaming</p>
                     </div>
-                    <Image ref={logoRef} src="/assets/images/common/logo_masked.png" alt="Mission and Vision Logo" className={styles.logoMasked} width={500} height={300} />
+                    <Image ref={logoRef} src="/assets/images/Common/logo_masked.png" alt="Mission and Vision Logo" className={styles.logoMasked} width={500} height={300} />
                 </div>
             </div>
 
