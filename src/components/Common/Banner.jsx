@@ -69,7 +69,6 @@ function Banner({ bgPath, overlayPath, title, quote, author }) {
             start: "top top",
             pin: true,
             pinSpacing: false,
-            pinType: "fixed"
         });
     }, []);
 

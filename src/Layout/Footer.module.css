@@ -18,7 +18,7 @@
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 1290px;
+    /* max-width: 1290px; */
     overflow: hidden;
 }
 
