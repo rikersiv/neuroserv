@@ -23,6 +23,9 @@ const useLogoAnimation = (logoRef, menuIconRef, bannerContentRef) => {
     
 
     gsap.set(menuIconRef.current, {
+      position: "fixed",
+      right: "8vw",
+      top: "2.5rem",
       opacity: 0,
       y: "-100%", 
     });
@@ -49,6 +52,28 @@ const useLogoAnimation = (logoRef, menuIconRef, bannerContentRef) => {
       ease: "power2.out",
     });
 
+    gsap.to(logoRef.current, {
+      scrollTrigger: {
+        trigger: bannerContentRef.current,
+        start: "top top",
+        scrub: true,
+        pinSpacing: false,
+        onLeave: () => {
+          // unpin logic — let it go with the flow
+          gsap.set(logoRef.current, {
+            clearProps: "all",
+            position: "relative",
+          });
+        },
+        onEnterBack: () => {
+          // re-apply the animated state
+          gsap.set(logoRef.current, {
+            position: "fixed",
+          });
+        }
+      },
+    });
+    
     gsap.to(menuIconRef.current, {
       scrollTrigger: {
         trigger: document.body,
@@ -60,6 +85,29 @@ const useLogoAnimation = (logoRef, menuIconRef, bannerContentRef) => {
       y: 0,
       ease: "power2.out",
     });
+
+    gsap.to(menuIconRef.current, {
+      scrollTrigger: {
+        trigger: bannerContentRef.current,
+        start: "top top",
+        scrub: true,
+        pinSpacing: false,
+        onLeave: () => {
+          gsap.set(menuIconRef.current, {
+            clearProps: "all",
+            position: "relative",
+          });
+        },
+        onEnterBack: () => {
+          gsap.set(menuIconRef.current, {
+            position: "fixed",
+            top: "2.5rem",
+            right: "8vw",
+          });
+        },
+      },
+    });
+
 
     gsap.to(bannerContentRef.current, {
       scrollTrigger: {

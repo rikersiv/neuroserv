@@ -8,7 +8,7 @@ import React from "react";
 function solutions() {
     return (
         <div style={{ overflowX: "hidden" }}>
-            <Header />
+            
             <Banner bgPath='abstract-background.jpg'
                 overlayPath={'flower-background.png'}
                 title={'Intelligence That Evolves With You'}

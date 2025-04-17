@@ -3,6 +3,7 @@ import styles from "./Banner.module.css";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Header from "@/Layout/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,6 +76,7 @@ function Banner({ bgPath, overlayPath, title, quote, author }) {
     return (
         <>
             <div ref={bannerRef} className={styles.banner} style={{ backgroundImage: `url('/assets/images/Common/${bgPath}')` }}>
+            <Header />
                 <div className={styles.bannerContent}>
                     <div className={styles.overlayImage} ref={overlayRef}>
                         <h1 ref={textRef}>{title}</h1>
