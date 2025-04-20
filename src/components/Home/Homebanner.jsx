@@ -18,7 +18,7 @@ const HomeBanner = ({ bannerContentRef }) => {
         Immersive Bio-adaptive Gaming Experiences Unlocking the Future of Human Potential 
         </h4>
 
-        <Button arrowSrc="/assets/images/icons/arrow_left.svg" text="Discover neuraserv" href="/" isWhite={true} />
+        <Button arrowSrc="/assets/images/icons/arrow_left.svg" text="Discover neuraserv" href="/about" isWhite={true} />
       </div>
     </div>
   );

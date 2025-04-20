@@ -20,6 +20,7 @@
     width: 100%;
     height: fit-content;
     max-width: 1290px;
+    flex-wrap: wrap;
 }
 
 .contactWrapper h2{
@@ -98,6 +99,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     width: 100%;
     gap: 1rem;
 }
@@ -191,3 +193,61 @@
     width: 100%;
     text-align: left;
   }
+
+  @media (max-width: 1300px) {
+    .contactInfo{
+        padding: 5rem 5rem;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .row{
+        flex-direction: column;
+        gap: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contactWrapper h2 {
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+
+    .contactWrapper p {
+        width: 90%;
+    }
+
+    .contactInfo{
+        padding: 5rem 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contactInfo div{
+        gap: 0;
+    }
+
+    .contactFormContainer h2{
+        font-size: 2rem;
+    }
+
+    .contactForm{
+        width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactWrapper h2 {
+        font-size: 2rem;
+        margin-top: 5rem;
+    }
+
+    .contactWrapper p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+
+    .contactFormContainer h2{
+        font-size: 1.5rem;
+    }
+}

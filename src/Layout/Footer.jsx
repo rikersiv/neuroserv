@@ -44,7 +44,7 @@ function Footer() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: footerRef.current,
-                start: "top top",
+                start: "top 10%",
                 toggleActions: "play none none reverse"
             }
         });
@@ -79,7 +79,7 @@ function Footer() {
         <footer className={styles.footer_wrapper} ref={footerRef}>
             <div className={styles.footerInnerWrapper}>
                 <div className={styles.footer_container}>
-                    <div ref={logoRef}>
+                    <div ref={logoRef} className={styles.footerLogo}>
                         <Image src="/assets/images/icons/footer_logo.png" alt="logo" width={300} height={50} />
                     </div>
                     <div className={styles.footer_content}>

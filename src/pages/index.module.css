@@ -149,57 +149,6 @@
     font-size: 50%;
 }
 
-.homeBottom{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 5;
-}
-
-.video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative
-}
-
-.bottomOverlay{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: var(--primary-color);
-    opacity: 0.7;
-    z-index: 6;
-}
-
-.bottomContent{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    opacity: 1;
-}
-
-.bottomContent h1{
-    color: var(--primary-foreground);
-    text-align: center;
-}
-
 .newsContainer{
     width: 100%;
     height: 100%;
@@ -240,4 +189,70 @@
     left: -10%;
     z-index: -1;
 
+}
+
+@media (max-width:900px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .aboutGrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutCard{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .aboutCard h2{
+        text-align: right;
+        font-size: 2.5rem;
+    }
+
+    .aboutCard p{
+        text-align: right;
+    }
+}
+
+@media (max-width:480px){
+    .grid{
+        grid-template-columns: none;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .grid h1{
+        font-size: 1.5rem;
+    }
+
+    .offerCard{
+        height: 150px;
+    }
+
+    .offerCard h2{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    .aboutCard img{
+        width: 30%;
+    }
+
+    .aboutCard{
+        padding: 1rem 2rem 1rem 1rem;
+        gap: 10px;
+    }
+
+    .aboutCard h2{
+        font-size: 1.8rem;
+    }
+
+    .aboutCard p{
+        font-size: 1rem;
+    }
+
+    .header h2{
+        font-size: 1.8rem;
+        width: 50%;
+    }
 }

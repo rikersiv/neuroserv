@@ -11,13 +11,14 @@ import parse from "html-react-parser";
 import Button from "@/components/CTAs/Button";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import NewsList from "@/components/News/NewsList";
+import VideoSec from "@/components/Common/VideoSec";
 
 function Home() {
   const logoRef = useRef(null);
   const menuIconRef = useRef(null);
   const bannerContentRef = useRef(null);
   useLogoAnimation(logoRef, menuIconRef, bannerContentRef);
-  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs, videoRef, overlayRef, newsHeaderRef, newsButtonRef, newsSectionRef, newsListRef } = useScrollAnimation();
+  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs, newsHeaderRef, newsButtonRef, newsSectionRef, newsListRef } = useScrollAnimation();
 
   const offers = [
     {
@@ -106,7 +107,7 @@ mental agility.<br/><br/>AI personalization through adventure and fun ensures ev
         imgSrc={"/assets/images/Home/aezonia.png"}
         iswhite={true}
         isButtonWhite={false}
-        buttonHref="/about"
+        buttonHref="/solutions/aezonia"
         buttonText="Know Us More"
         zindex={3}
       />
@@ -125,18 +126,10 @@ mental agility.<br/><br/>AI personalization through adventure and fun ensures ev
         </div>
       </div>
 
-      <div ref={videoRef} className={styles.homeBottom}>
-        <video className={styles.video} autoPlay loop muted>
-          <source src="/assets/images/Home/collaboration.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div ref={overlayRef} className={styles.bottomOverlay}>
-        <div className={styles.bottomContent}>
-          <h1>Join Us in Shaping the Future of NeuroTechnology</h1>
-          <Button text="Collaborate with neuraserv" arrowSrc="/assets/images/icons/arrow_left.svg" href="/contact" isWhite={true} />
-        </div>
-      </div>
+     <VideoSec videoSrc={"/assets/images/Home/collaboration.mp4"}
+     title={"Join Us in Shaping the Future of NeuroTechnology"}
+     buttonText={"Collaborate with neuraserv"}
+     buttonhref={"/contact"}/>
 
       <div className={styles.newsContainer} ref={newsSectionRef}>
 
@@ -148,7 +141,7 @@ mental agility.<br/><br/>AI personalization through adventure and fun ensures ev
               <Button text="See All" arrowSrc="/assets/images/icons/arrow_left.svg" href="/news" isWhite={false} />
             </div>
           </div>
-          <div ref={newsListRef}>
+          <div ref={newsListRef} className={styles.newsList}>
             <NewsList />
           </div>
         </div>

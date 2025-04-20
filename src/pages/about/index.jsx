@@ -55,7 +55,7 @@ function About() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: Mission,
-                start: "top top",
+                start: "top 20%",
                 toggleActions: "play none none reverse",
             }
         });
@@ -81,7 +81,7 @@ function About() {
 
         tl.to(logo, {
             rotation: 180,
-            duration: 1.2,
+            duration: 1,
             ease: "none"
         }, "<");
 
@@ -93,7 +93,7 @@ function About() {
             opacity: 1,
             duration: 1.2,
             ease: "power2.out"
-        }, "+=0.5");
+        }, "+=0.02");
 
         tl.fromTo(titleVision, {
             xPercent: -100,
@@ -113,7 +113,7 @@ function About() {
             opacity: 1,
             duration: 1.2,
             ease: "power2.out"
-        }, "+=0.6");
+        }, "+=0.03");
 
         tl.fromTo(textVision, {
             xPercent: -100,

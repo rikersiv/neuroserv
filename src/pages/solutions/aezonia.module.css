@@ -1,0 +1,150 @@
+.divContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8vw;
+}
+
+.divWrapper{
+    width: 100%;
+    max-width: 1290px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 5rem;
+}
+
+.divContent{
+    flex: 1;
+}
+
+.divImage{
+    flex: 1;
+    height: 70%;
+    position: relative;
+}
+
+.imageWrapper{
+    height: 85%;
+    width: 95%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.imageOverlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    position: relative;
+}
+
+.divContentText{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    gap: 2rem;
+    
+}
+
+.divContent h2{
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+}
+
+.divText{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    gap: 1rem;
+}
+
+.divText p{
+    color: black;
+}
+
+.divContainer a{
+    width: fit-content;
+}
+
+@media (max-width: 900px) {
+    .divWrapper{
+        flex-direction: column;
+        gap: 0;
+        height: 80%;
+    }
+
+    .divImage{
+        width: 100%;
+    }
+
+    .divContentText{
+        height: fit-content;
+    }
+
+    .divContent h2{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .divWrapper{
+        flex-direction: column;
+        gap: 0;
+        height: 85%;
+    }
+
+    .divImage{
+        width: 100%;
+    }
+
+    .divContentText{
+        height: fit-content;
+    }
+
+    .divContent h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .divWrapper{
+        flex-direction: column;
+        gap: 0;
+        height: 85%;
+    }
+
+    .divContent h2{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .divContent p{
+        font-size: 1rem;
+    }
+
+}
