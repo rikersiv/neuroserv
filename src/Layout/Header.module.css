@@ -125,12 +125,10 @@
     }
 
     .logo{
-        left: 8vw;
         top: 1.5rem;
     }
     
     .menuIcon{
-        right: 8vw;
         top: 1.5rem;
     }
 }
