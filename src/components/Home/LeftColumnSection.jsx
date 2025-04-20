@@ -22,11 +22,11 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
         const image = imageRef.current;
 
         gsap.fromTo(image, {
-            width: '120%',    
+            width: '120%',
             opacity: 0,
             transformOrigin: "left center"
         }, {
-            width: '71%',       
+            width: '100%',
             opacity: 1,
             duration: 2,
             ease: "power3.out",
@@ -90,16 +90,19 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
     return (
         <div ref={sectionRef} className={`${styles.columnWrapper} ${iswhite ? 'white' : 'blue'}`} style={{ zIndex: zindex }}>
             <div className={styles.gridContainer}>
-                <div className={styles.columnText}>
-                    <div className={styles.linePath}>
-                        <Image ref={logoRef} src="/assets/images/icons/logo.svg" alt="Logo" width={50} height={50} className={`${iswhite ? 'filter' : ''}`} />
-                        <svg ref={lineRef} className={`${styles.line} ${iswhite ? styles.filter : ''}`} width="58.4em" height="5" viewBox="0 0 58.4em 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="0.5" x2="58.4em" y2="0.5" stroke={iswhite ? "#1a6393" : "#ffffff"} strokeWidth="5" />
+                <div className={styles.linePath}>
+                    <Image ref={logoRef} src="/assets/images/icons/logo.svg" alt="Logo" width={50} height={50} className={`${iswhite ? 'filter' : ''}`} />
+                    <div className={styles.line}>
+                        <svg ref={lineRef} className={`${iswhite ? styles.filter : ''}`} width="100%" height="5" viewBox="0 0 100 5" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="0.5" x2="100" y2="0.5" stroke={iswhite ? "#1a6393" : "#ffffff"} strokeWidth="5" />
                         </svg>
                     </div>
+                </div>
+                <div className={styles.columnText}>
+
                     <h1 ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'white' : 'blue'}`}>{text}</h1>
-                    <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'white' : 'blue'}`}>{description}</p>
-                    <div ref={(el) => textRefs.current.push(el)}>
+                    <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'blue'}`}>{description}</p>
+                    <div ref={(el) => textRefs.current.push(el)} className={styles.button}>
                         <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
                     </div>
                 </div>

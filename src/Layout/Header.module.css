@@ -1,7 +1,14 @@
 .logo{
+    position: relative;
     scale: 1;
-    left: 8vw;
-    top: 2.5rem;
+    /* left: 8vw; */
+    /* top: 2.5rem; */
+}
+
+.menuIcon{
+    position: relative;
+    /* right: 8vw; */
+    /* top: 2.5rem; */
 }
 
 .logoBlend {
@@ -94,4 +101,46 @@
     background-color: var(--secondary-color);
     border-radius: 50%;
     padding: 15px;
+}
+
+.close{
+    position: fixed;
+    right: 8vw;
+    top: 2.5rem;
+}
+
+.menulogo{
+    position: fixed;
+    left: 8vw;
+    top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .menu_items{
+        padding: 20vw 8vw;
+    }
+
+    .menu_items div a{
+        font-size: 1.2rem;
+    }
+
+    .logo{
+        left: 8vw;
+        top: 1.5rem;
+    }
+    
+    .menuIcon{
+        right: 8vw;
+        top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu_items{
+        padding: 30vw 8vw;
+    }
+
+    .menu_items div a{
+        font-size: 1.2rem;
+    }
 }

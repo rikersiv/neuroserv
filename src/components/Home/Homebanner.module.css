@@ -37,3 +37,17 @@
     text-align: left;
     text-transform: uppercase;
 }
+
+@media (max-width: 480px) {
+    .bannerContent{
+        flex-direction: column;
+        align-items:baseline;
+        justify-content: left;
+    }
+
+    .bannerContent h4{
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}

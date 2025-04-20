@@ -42,8 +42,8 @@ function Header({ iswhite, logoRef, menuIconRef }) {
 
             <div className={styles.menu} ref={menuRef}>
                 <div className={styles.header}>
-                    <Image src="/assets/images/icons/logo_full.svg" alt="logo" width={150} height={50} />
-                    <Image src="/assets/images/icons/close.png" alt="close" width={30} height={30} onClick={() => setMenuOpen(false)} />
+                    <Image src="/assets/images/icons/logo_full.svg" alt="logo" width={150} height={50} className={styles.menulogo}/>
+                    <Image src="/assets/images/icons/close.png" alt="close" width={30} height={30} className={styles.close} onClick={() => setMenuOpen(false)} />
                 </div>
 
                 <div className={styles.menu_items}>

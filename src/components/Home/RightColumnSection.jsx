@@ -37,25 +37,14 @@ function RightColumnSection({ iswhite, isButtonWhite, text, description, imgSrc,
         });
 
         gsap.to(imageContainer, {
-            height: "40%",
+            height: "100%",
             duration: 1.2,
             ease: "power3.out",
             scrollTrigger: {
                 trigger: section,
-                start: "top 60%",
-                toggleActions: "play none none reverse"
-            }
-        });
-
-        gsap.to(imageContainer, {
-            height: "100%",
-            duration: 2,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: section,
-                start: "top 50%",
+                start: "top 20%",
                 end: "top 10%",
-                scrub: true
+                toggleActions: "play none none reverse"
             }
         });
 
@@ -100,9 +89,11 @@ function RightColumnSection({ iswhite, isButtonWhite, text, description, imgSrc,
             <div className={styles.gridContainer}>
                 <div className={styles.columnImage}>
                     <div className={styles.linePath}>
-                        <svg ref={lineRef} className={`${styles.line} ${iswhite ? 'filter' : ''}`} width="34rem" height="5" viewBox="0 0 34rem 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="0.5" x2="34rem" y2="0.5" stroke={iswhite ? "#1a6393" : "#ffffff"} strokeWidth="5" />
-                        </svg>
+                        <div className={styles.line}>
+                            <svg ref={lineRef} className={`${iswhite ? 'filter' : ''}`} width="100%" height="5" viewBox="0 0 100 5" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0" y1="0.5" x2="100" y2="0.5" stroke={iswhite ? "#1a6393" : "#ffffff"} strokeWidth="5" />
+                            </svg>
+                        </div>
                         <Image ref={logoRef} src="/assets/images/icons/logo.svg" alt="Logo" width={50} height={50} className={`${iswhite ? 'filter' : ''}`} />
                     </div>
 
@@ -120,7 +111,7 @@ function RightColumnSection({ iswhite, isButtonWhite, text, description, imgSrc,
                 <div className={styles.columnText}>
                     <h1 ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'white'}`}>{text}</h1>
                     <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'white'}`}>{parse(description)}</p>
-                    <div ref={(el) => textRefs.current.push(el)}>
+                    <div ref={(el) => textRefs.current.push(el)} className={styles.button}>
                         <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
                     </div>
                 </div>

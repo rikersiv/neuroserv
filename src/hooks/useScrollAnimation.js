@@ -67,7 +67,7 @@ const useScrollAnimation = () => {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: section,
-                    start: "top top",
+                    start: "top 10%",
                     toggleActions: "play none none reverse"
                 }
             });
@@ -137,21 +137,21 @@ const useScrollAnimation = () => {
 
         ScrollTrigger.create({
             trigger: section,
-            start: "top top",
+            start: "bottom bottom",
             pin: true,
             pinSpacing: false
         });
 
         ScrollTrigger.create({
             trigger: aboutSection,
-            start: "top top",
+            start: "bottom bottom",
             pin: true,
             pinSpacing: false
         });
 
         ScrollTrigger.create({
             trigger: video,        
-            start: "top top",      
+            start: "bottom bottom",      
             endTrigger: overlay,   
             end: "bottom top",     
             pin: true,            
@@ -160,7 +160,7 @@ const useScrollAnimation = () => {
 
         ScrollTrigger.create({
             trigger: overlay,
-            start: "top top",
+            start: "bottom bottom",
             pin: true,
             pinSpacing: false
         });

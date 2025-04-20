@@ -160,3 +160,106 @@
     text-align: left;
     color: black;
 }
+
+@media (max-width: 1300px) {
+
+    .missionContent p,
+    .visionContent p {
+        font-size: 1.5rem;
+    }
+
+    .missionContent,
+    .visionContent {
+        gap: 1%;
+    }
+
+    .valuesCard h2{
+        font-size: 1.4rem;
+    }
+
+    .valuesCard p{
+        font-size: 1rem;
+    }
+
+    .valuesCard img{
+        width: 30%;
+    }
+}
+
+@media (max-width: 900px) {
+    .valuesCard{
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .missionVisionWrapper{
+        gap: 5rem;
+    }
+
+    .valuesGrid{
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+        height: fit-content;
+        gap: 1rem;
+    }
+
+    .valuesCard{
+        flex-direction: row;
+        height: fit-content;
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .valuesCard img{
+        width: 15%;
+    }
+
+    .header h2{
+        font-size: 2rem;
+    }
+
+    .missionContent, .visionContent{
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .missionContent p, .visionContent p{
+        width: 65%;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .valuesGrid{
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 0.9fr);
+        height: fit-content;
+        gap: 1rem;
+    }
+
+    .valuesCard h2{
+        font-size: 1.1rem;
+    }
+
+    .valuesCard p{
+        font-size: 1rem;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header h2{
+        font-size: 1.5rem;
+    }
+
+    .valuesCard img{
+        width: 10%;
+        height: 10%;
+    }
+
+}

@@ -77,3 +77,39 @@
     text-transform: uppercase;
     width: 70%;
 }
+
+@media (max-width: 900px) {
+    .bannerContent h1{
+        font-size: 2.5rem;
+        width: 80%;
+    }
+
+    .quoteText{
+        font-size: 2rem;
+    } 
+}
+
+@media (max-width: 768px) {
+    .bannerContent h1{
+        font-size: 2.5rem;
+        width: 100%;
+        top: -5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerContent h1{
+        font-size: 1.4rem;
+        width: 100%;
+        top: -5%;
+    }
+
+    .quoteText{
+        font-size: 1.3rem;
+        font-weight: 400;
+    } 
+
+    .quoteAuthor{
+        font-size: 1rem;
+    }
+}

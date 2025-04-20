@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./SolutionsList.module.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,32 +14,41 @@ const SolutionsList = () => {
             title: "Bio-adaptive personalization",
             description: "Engineered for mindfulness, focus, and emotional resilience.",
             bgImage: "/assets/images/Solutions/solution1.jpg",
+            href: "/solutions",
         },
         {
             title: "Gamified Intelligence",
             description: "Redefining human potential through AI, neuroscience, and gaming.",
-            bgImage: "/assets/images/home/image3.jpg",
+            bgImage: "/assets/images/Solutions/solution2.jpg",
+            href: "/solutions/aezonia",
         },
         {
             title: "Multi-industry applications",
             description: "Consumer wellness, corporate performance, education.",
             bgImage: "/assets/images/home/image3.jpg",
+            href: "/solutions",
         },
         {
             title: "Continuous testing",
             description: "Through gameplay provided unmatched AI model performance.",
             bgImage: "/assets/images/home/image3.jpg",
+            href: "/solutions",
         },
     ];
 
     useEffect(() => {
-        ScrollTrigger.create({
+        const trigger = ScrollTrigger.create({
             trigger: sectionRef.current,
             start: "top top",
             pin: true,
             pinSpacing: false
         });
-    });
+    
+        return () => {
+            trigger.kill();
+        };
+    }, []); 
+    
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -57,7 +67,7 @@ const SolutionsList = () => {
                             >
                                 <p className={`${styles.itemName}`}>{item.title}</p>
                                 {activeIndex === index && (
-                                    <div className={styles.icon}>
+                                    <Link className={styles.icon} href={item.href}>
                                         <Image
                                             src="/assets/images/icons/arrow_up.svg"
                                             alt="Arrow Icon"
@@ -66,7 +76,7 @@ const SolutionsList = () => {
                                             className="whiteFilter"
                                             style={{ transform: "rotate(40deg)" }}
                                         />
-                                    </div>
+                                    </Link>
                                 )}
                             </div>
                         ))}
