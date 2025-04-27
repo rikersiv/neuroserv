@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Banner from "@/components/Common/Banner";
-import LeftColumnSection from "@/components/Home/LeftColumnSection";
+import LeftColumnSection from "@/components/Home/LeftColumnSectionAbout";
 import Header from "@/Layout/Header";
 import styles from "./index.module.css";
 import Image from "next/image";
@@ -25,6 +25,7 @@ function About() {
     const headingRef = useRef(null);
     const buttonRef = useRef(null);
     const valuesGridRef = useRef(null);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         const logo = logoRef.current;
@@ -37,6 +38,7 @@ function About() {
         const buttonText = buttonRef.current;
         const heading = headingRef.current;
         const valuesRef = valuesGridRef.current;
+        const video = videoRef.current;
 
         gsap.set(logo, {
             position: "absolute",
@@ -184,6 +186,13 @@ function About() {
             pinSpacing: false
         });
 
+        ScrollTrigger.create({
+            trigger: video,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+
     }, []);
 
 
@@ -224,7 +233,7 @@ function About() {
                 zindex={4}
             />
 
-            <div className={styles.octopusWrapper}>
+            <div className={styles.octopusWrapper} ref={videoRef}>
                 <video className={styles.octopusVideo} autoPlay loop muted playsInline>
                     <source src="/assets/images/Common/octopus.mp4" type="video/mp4" />
                     Your browser does not support the video tag.

@@ -14,14 +14,8 @@ function Banner({ bgPath, overlayPath, title, quote, author }) {
     const quoteRef = useRef(null);
 
     useEffect(() => {
-        gsap.fromTo(
+        gsap.to(
             overlayRef.current,
-            {
-                width: "75%",
-                height: "75%",
-                bottom: "0%",
-                left: "50%",
-            },
             {
                 width: "100%",
                 height: "100%",
@@ -74,9 +68,10 @@ function Banner({ bgPath, overlayPath, title, quote, author }) {
     }, []);
 
     return (
-        <>
-            <div ref={bannerRef} className={styles.banner} style={{ backgroundImage: `url('/assets/images/Common/${bgPath}')` }}>
+        <div>
             <Header />
+            <div ref={bannerRef} className={styles.banner} style={{ backgroundImage: `url('/assets/images/Common/${bgPath}')` }}>
+
                 <div className={styles.bannerContent}>
                     <div className={styles.overlayImage} ref={overlayRef}>
                         <h1 ref={textRef}>{title}</h1>
@@ -89,7 +84,7 @@ function Banner({ bgPath, overlayPath, title, quote, author }) {
                 <h2 className={styles.quoteText}>{quote}</h2>
                 <small className={styles.quoteAuthor}>— {author}</small>
             </div>
-        </>
+        </div>
     );
 }
 

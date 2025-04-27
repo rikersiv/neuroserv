@@ -10,9 +10,9 @@ import Footer from "@/Layout/Footer";
 function AezoniaLaunch() {
 
     const socials = [
-        { name: "LinkedIn", url: "https://www.linkedin.com/company/neuraserv/", src: "/assets/images/icons/linkedin.png" },
-        { name: "Twitter", url: "https://twitter.com/neuraserv", src: "/assets/images/icons/twitter.png" },
-        { name: "Facebook", url: "https://www.facebook.com/neuraserv", src: "/assets/images/icons/facebook.png" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/sharing/share-offsite/?url=https://neuraserv.vercel.app/news/aezonia_launch", src: "/assets/images/icons/linkedin.png" },
+        { name: "Twitter", url: "https://twitter.com/intent/tweet?url=https://neuraserv.vercel.app/news/aezonia_launch", src: "/assets/images/icons/twitter.png" },
+        { name: "Facebook", url: "https://www.facebook.com/sharer/sharer.php?u=https://neuraserv.vercel.app/news/aezonia_launch", src: "/assets/images/icons/facebook.png" },
     ];
 
     return (

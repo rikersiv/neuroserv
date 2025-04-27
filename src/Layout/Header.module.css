@@ -1,12 +1,14 @@
 .logo{
     position: relative;
     scale: 1;
+    z-index: 1000;
     /* left: 8vw; */
     /* top: 2.5rem; */
 }
 
 .menuIcon{
     position: relative;
+    z-index: 1000;
     /* right: 8vw; */
     /* top: 2.5rem; */
 }
