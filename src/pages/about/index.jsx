@@ -10,6 +10,7 @@ import Team from "@/components/About/Team";
 import Footer from "@/Layout/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -214,6 +215,11 @@ function About() {
         }
     ]
     return (
+    <>
+    <Head>
+        <title>Neuraserv | About</title>
+        <meta name="description" content="Learn about Neuraserv's mission to elevate human cognition, emotional resilience, and personal growth by combining cutting-edge neuroscience and AI innovation. Discover our vision, story, and the team behind the future of mental well-being." />
+      </Head>
         <div style={{ overflowX: "hidden" }}>
             {/* <Header /> */}
             <Banner bgPath='pretty-macro-blue-flower.jpg'
@@ -280,6 +286,7 @@ function About() {
             <Team />
             <Footer />
         </div>
+    </>
     );
 }
 

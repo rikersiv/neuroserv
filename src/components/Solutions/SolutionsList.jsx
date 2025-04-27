@@ -13,25 +13,25 @@ const SolutionsList = () => {
         {
             title: "Bio-adaptive personalization",
             description: "Engineered for mindfulness, focus, and emotional resilience.",
-            bgImage: "/assets/images/Solutions/solution1.jpg",
+            bgImage: "/assets/images/Solutions/personalization.png",
             href: "/solutions/bio-adaptive-personalization",
         },
         {
             title: "Gamified Intelligence",
             description: "Redefining human potential through AI, neuroscience, and gaming.",
-            bgImage: "/assets/images/Solutions/solution2.jpg",
+            bgImage: "/assets/images/Solutions/gamified-intelligence.png",
             href: "/solutions/gamified-intelligence",
         },
         {
             title: "Multi-industry applications",
             description: "Consumer wellness, corporate performance, education.",
-            bgImage: "/assets/images/home/image3.jpg",
+            bgImage: "/assets/images/Solutions/applications.png",
             href: "/solutions/multi-industry-applications",
         },
         {
             title: "Continuous testing",
             description: "Through gameplay provided unmatched AI model performance.",
-            bgImage: "/assets/images/home/image3.jpg",
+            bgImage: "/assets/images/Solutions/continuous-testing.png",
             href: "/solutions/continuous-testing",
         },
     ];

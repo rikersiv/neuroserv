@@ -7,9 +7,15 @@ import Header from "@/Layout/Header";
 import styles from "./aezonia.module.css";
 import Button from "@/components/CTAs/Button";
 import Image from "next/image";
+import Head from "next/head";
 
 function Aezonia() {
     return (
+        <>
+          <Head>
+        <title>Neuraserv | Aezonia</title>
+        <meta name="description" content="is the first-of-its-kind bio-adaptive cognitive enhancement game" />
+      </Head>
         <div>
             <Header />
             <PageBanner />
@@ -58,6 +64,7 @@ function Aezonia() {
                 buttonhref={"/contact"} />
             <Footer />
         </div>
+        </>
     );
 }
 
