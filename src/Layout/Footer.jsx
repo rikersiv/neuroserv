@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Footer() {
     const footerRef = useRef(null);
     const logoRef = useRef(null);
+    const logoRefMobile = useRef(null);
     const innerContentLeftRef = useRef(null);
     const innerContentRightRef = useRef(null);
     const bottomRef = useRef(null);
@@ -53,26 +54,31 @@ function Footer() {
             { x: -100, opacity: 0 },
             { x: 0, opacity: 1, duration: 1, ease: "power2.out" }
         )
-        .fromTo(innerContentLeftRef.current,
-            { y: -50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
-            "-=0.8"
-        )
-        .fromTo(innerContentTopRef.current,
-            { y: -50, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
-            "-=0.8"
-        )
-        .fromTo(innerContentRightRef.current,
-            { x: 100, opacity: 0 },
-            { x: 0, opacity: 1, duration: 1, ease: "power2.out" },
-            "-=0.8"
-        )
-        .fromTo(bottomRef.current,
-            { y: 100, opacity: 0 },
-            { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
-            "-=0.8"
-        );
+            .fromTo(logoRef.current,
+                { x: -100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, ease: "power2.out" },
+                0
+            )
+            .fromTo(innerContentLeftRef.current,
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
+                "-=0.8"
+            )
+            .fromTo(innerContentTopRef.current,
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
+                "-=0.8"
+            )
+            .fromTo(innerContentRightRef.current,
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1, ease: "power2.out" },
+                "-=0.8"
+            )
+            .fromTo(bottomRef.current,
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
+                "-=0.8"
+            );
     }, []);
 
     return (
@@ -99,6 +105,10 @@ function Footer() {
                                         </Link>
                                     ))}
                                 </div>
+                            </div>
+
+                            <div ref={logoRefMobile} className={styles.footerLogoHalf}>
+                                <Image src="/assets/images/icons/footer_logo_half.png" alt="logo" width={300} height={50} />
                             </div>
                         </div>
                     </div>

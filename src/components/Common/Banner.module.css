@@ -104,6 +104,14 @@
         top: -5%;
     }
 
+    .overlayImage{
+        height: 60%;
+    }
+
+    .overlayImage h1{
+        font-size: 1.8rem;
+    }
+
     .quoteText{
         font-size: 1.3rem;
         font-weight: 400;

@@ -2,12 +2,13 @@ import React, { useEffect, useRef } from "react";
 import Button from "../CTAs/Button";
 import styles from "./LeftColumnSection.module.css";
 import Image from "next/image";
+import parse from "html-react-parser";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText, buttonHref, zindex }) {
+function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText, buttonHref, zindex, isButton = true }) {
     const sectionRef = useRef(null);
     const logoRef = useRef(null);
     const lineRef = useRef(null);
@@ -101,10 +102,12 @@ function LeftColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, 
                 <div className={styles.columnText}>
 
                     <h1 ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'white' : 'blue'}`}>{text}</h1>
-                    <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'blue'}`}>{description}</p>
-                    <div ref={(el) => textRefs.current.push(el)} className={styles.button}>
-                        <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
-                    </div>
+                    <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'blue'}`}>{parse(description)}</p>
+                    {isButton &&
+                        <div ref={(el) => textRefs.current.push(el)} className={styles.button}>
+                            <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
+                        </div>
+                    }
                 </div>
                 <div className={styles.columnImage} ref={imageRef}>
                     <div className={styles.imageContainer}>

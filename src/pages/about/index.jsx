@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Banner from "@/components/Common/Banner";
-import LeftColumnSection from "@/components/Home/LeftColumnSection";
+import LeftColumnSection from "@/components/Home/LeftColumnSectionAbout";
 import Header from "@/Layout/Header";
 import styles from "./index.module.css";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import Team from "@/components/About/Team";
 import Footer from "@/Layout/Footer";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,7 @@ function About() {
     const headingRef = useRef(null);
     const buttonRef = useRef(null);
     const valuesGridRef = useRef(null);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         const logo = logoRef.current;
@@ -37,6 +39,7 @@ function About() {
         const buttonText = buttonRef.current;
         const heading = headingRef.current;
         const valuesRef = valuesGridRef.current;
+        const video = videoRef.current;
 
         gsap.set(logo, {
             position: "absolute",
@@ -184,6 +187,13 @@ function About() {
             pinSpacing: false
         });
 
+        ScrollTrigger.create({
+            trigger: video,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+
     }, []);
 
 
@@ -205,6 +215,11 @@ function About() {
         }
     ]
     return (
+    <>
+    <Head>
+        <title>Neuraserv | About</title>
+        <meta name="description" content="Learn about Neuraserv's mission to elevate human cognition, emotional resilience, and personal growth by combining cutting-edge neuroscience and AI innovation. Discover our vision, story, and the team behind the future of mental well-being." />
+      </Head>
         <div style={{ overflowX: "hidden" }}>
             {/* <Header /> */}
             <Banner bgPath='pretty-macro-blue-flower.jpg'
@@ -224,7 +239,7 @@ function About() {
                 zindex={4}
             />
 
-            <div className={styles.octopusWrapper}>
+            <div className={styles.octopusWrapper} ref={videoRef}>
                 <video className={styles.octopusVideo} autoPlay loop muted playsInline>
                     <source src="/assets/images/Common/octopus.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -271,6 +286,7 @@ function About() {
             <Team />
             <Footer />
         </div>
+    </>
     );
 }
 

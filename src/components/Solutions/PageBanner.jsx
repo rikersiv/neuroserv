@@ -9,7 +9,7 @@ function PageBanner() {
             <div className={styles.bannerContentWrapper}>
                 <div className={styles.bannerContent}>
                     <h1>Aezonia</h1>
-                    <p>Future of Cognitive Gaming An immersive experience blending entertainment with neuroscience-backed cognitive training.</p>
+                    <p>is the first-of-its-kind bio-adaptive cognitive enhancement game</p>
                 </div>
             </div>
         </div>
