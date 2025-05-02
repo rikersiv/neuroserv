@@ -36,12 +36,10 @@ function GamifiedIntelligence() {
 
                 <RightColumnSection
                     text="A Blueprint For Evolution"
-                    description="Aezonia's success demonstrates how effective gamification can transform cognitive enhancement across multiple domains. This model now serves as the strategic foundation for NeuroServ's expanding portfolio, from mindfulness applications to corporate training and educational technology."
+                    description="Aezonia's success demonstrates how effective gamification can transform cognitive enhancement across multiple domains. This model now serves as the strategic foundation for neuroserv's expanding portfolio, from mindfulness applications to corporate training and educational technology."
                     imgSrc={"/assets/images/Solutions/gamified-intelligence-3.png"}
                     iswhite={true}
-                    isButtonWhite={false}
-                    buttonHref="/solutions"
-                    buttonText="Explore Our Approaches"
+                    isButton={false}
                     zindex={4}
                 />
 
@@ -52,8 +50,8 @@ function GamifiedIntelligence() {
                     iswhite={false}
                     isButton={true}
                     isButtonWhite={true}
-                    buttonHref="/contact"
-                    buttonText="Partner With Us"
+                    buttonHref="/solutions"
+                    buttonText="Discover More Solutions"
                     zindex={5}
                 />
 

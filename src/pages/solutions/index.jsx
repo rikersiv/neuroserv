@@ -28,7 +28,7 @@ function solutions() {
                     iswhite={false}
                     isButtonWhite={true}
                     buttonHref="/contact"
-                    buttonText="Get in Touch"
+                    buttonText="Contact Us"
                     zindex={4}
                 />
                 <SolutionsList />

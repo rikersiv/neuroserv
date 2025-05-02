@@ -52,7 +52,7 @@ function Header({ iswhite, logoRef, menuIconRef }) {
                     </div>
                     <div>
                         <Link href="/">Home</Link>
-                        <Link href="/about">Know Us</Link>
+                        <Link href="/about">About Us</Link>
                         <Link href="/solutions">Solutions</Link>
                         <Link href="/news">News</Link>
                     </div>

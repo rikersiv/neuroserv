@@ -39,9 +39,7 @@ function ContinuousTesting() {
                     description="Each subsidiary maintains strategic research partnerships with leading academic institutions while benefiting from neuroserv's central coordination. This integrated approach allows companies like Limitless You Games to focus on domain-specific innovations while contributing to our broader knowledge ecosystem."
                     imgSrc={"/assets/images/Solutions/continuous-testing-3.jpg"}
                     iswhite={true}
-                    isButtonWhite={false}
-                    buttonHref="/about"
-                    buttonText="Discover Our Portfolio"
+                    isButton={false}
                     zindex={4}
                 />
 
@@ -52,8 +50,8 @@ function ContinuousTesting() {
                     iswhite={false}
                     isButton={true}
                     isButtonWhite={true}
-                    buttonHref="/news"
-                    buttonText="View Our Research"
+                    buttonHref="/solutions"
+                    buttonText="Discover More Solutions"
                     zindex={5}
                 />
 
