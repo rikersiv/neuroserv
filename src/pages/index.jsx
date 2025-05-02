@@ -79,7 +79,7 @@ function Home() {
         />
         <RightColumnSection
           text="Performance Unlocked"
-          description="<br/><br/><strong>AI-Powered</strong> Bio-Adaptive For Personalized Experiences.<br/><br/><strong>Clinically Validated Cognitive</strong> Gains based on leading neuroscience research.<br/><br/><strong>Immersive Gamified Learning</strong> for enhanced mental well-being."
+          description="<br/><br/><strong>AI-Powered</strong> bio-adaptive for personalized experiences.<br/><br/><strong>Clinically Validated Cognitive</strong> gains based on leading neuroscience research.<br/><br/><strong>Immersive Gamified Learning</strong> for enhanced mental well-being."
           imgSrc={"/assets/images/Home/image2.jpg"}
           iswhite={true}
           isButtonWhite={false}
@@ -109,13 +109,13 @@ function Home() {
 
         <RightColumnSection
           text="Aezonia - The Future of Cognitive Gaming"
-          description="<br/><br/>AImmersive Experience Blending Entertainment with Neuroscience-Backed Cognitive Training.<br/><br/>Scientifically validated to improve mindfullness, focus, stress resilience, 
+          description="<br/><br/>An immersive experience blending Entertainment with neuroscience-backed cognitive training.<br/><br/>Scientifically validated to improve mindfullness, focus, stress resilience, 
 mental agility.<br/><br/>AI personalization through adventure and fun ensures every user experiences tailored cognitive improvement."
           imgSrc={"/assets/images/Home/aezonia.png"}
           iswhite={true}
           isButtonWhite={false}
           buttonHref="/solutions/aezonia"
-          buttonText="Know Us More"
+          buttonText="Explore More"
           zindex={3}
         />
 
@@ -135,7 +135,7 @@ mental agility.<br/><br/>AI personalization through adventure and fun ensures ev
 
         <VideoSec videoSrc={"/assets/images/Home/collaboration.mp4"}
           title={"Join Us in Shaping the Future of NeuroTechnology"}
-          buttonText={"Collaborate with neuraserv"}
+          buttonText={"Contact Us"}
           buttonhref={"/contact"} />
 
         <div className={styles.newsContainer} ref={newsSectionRef}>

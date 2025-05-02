@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function RightColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText, buttonHref, zindex, videoSrc }) {
+function RightColumnSection({ iswhite, isButtonWhite, text, description, imgSrc, buttonText, buttonHref, zindex, videoSrc, isButton = true }) {
     const sectionRef = useRef(null);
     const imageContainerRef = useRef(null);
     const logoRef = useRef(null);
@@ -111,9 +111,11 @@ function RightColumnSection({ iswhite, isButtonWhite, text, description, imgSrc,
                 <div className={styles.columnText}>
                     <h1 ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'white'}`}>{text}</h1>
                     <p ref={(el) => textRefs.current.push(el)} className={`${iswhite ? 'black' : 'white'}`}>{parse(description)}</p>
-                    <div ref={(el) => textRefs.current.push(el)} className={styles.button}>
-                        <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
-                    </div>
+                    {isButton && (
+                        <div ref={(el) => textRefs.current.push(el)} className={styles.button}>
+                            <Button text={buttonText} arrowSrc="/assets/images/icons/arrow_left.svg" href={buttonHref} isWhite={isButtonWhite} />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

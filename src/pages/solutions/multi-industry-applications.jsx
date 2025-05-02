@@ -22,11 +22,11 @@ function MultiIndustryApplications() {
                 />
                 <FlexSection
                     header={"EXPANDING HUMAN POTENTIAL ACROSS SECTORS"}
-                    description={"NeuroServ harnesses neuroscience-driven innovation across multiple industries through our carefully cultivated portfolio of specialized companies. With Aezonia establishing our breakthrough approach, we're now extending these principles into diverse markets with targeted solutions."}
+                    description={"neuroserv harnesses neuroscience-driven innovation across multiple industries through our carefully cultivated portfolio of specialized companies. With Aezonia establishing our breakthrough approach, we're now extending these principles into diverse markets with targeted solutions."}
                     imgPath={"applications-1.jpg"}
                 />
                 <LeftColumnSection
-                    text="Transforming Five Key Domains"
+                    text="Transforming Key Domains"
                     description="<strong>Gaming & Personal Wellness:</strong> Our flagship product Aezonia delivers clinically-validated mindfulness through immersive gameplay.</br></br><strong>Corporate Development:</strong> Customized training solutions optimize executive function and decision-making in professional environments.</br></br><strong>Education:</strong> Adaptive learning platforms respond to individual cognitive styles, revolutionizing information retention."
                     imgSrc={"/assets/images/Solutions/applications-2.png"}
                     iswhite={false}
@@ -39,9 +39,7 @@ function MultiIndustryApplications() {
                     description="<strong>Healthcare Integration:</strong> Supportive tools complement traditional treatments for cognitive and behavioral challenges.</br></br><strong>Performance Enhancement:</strong> Specialized applications optimize mental function in high-stakes environments, from athletics to creative professions."
                     imgSrc={"/assets/images/Solutions/applications-3.jpg"}
                     iswhite={true}
-                    isButtonWhite={false}
-                    buttonHref="/about"
-                    buttonText="Discover Our Portfolio"
+                    isButton={false}
                     zindex={4}
                 />
 
@@ -52,8 +50,8 @@ function MultiIndustryApplications() {
                     iswhite={false}
                     isButton={true}
                     isButtonWhite={true}
-                    buttonHref="/contact"
-                    buttonText="Partner With Us"
+                    buttonHref="/solutions"
+                    buttonText="Discover More Solutions"
                     zindex={5}
                 />
 

@@ -235,7 +235,7 @@ function About() {
                 iswhite={true}
                 isButtonWhite={false}
                 buttonHref="/contact"
-                buttonText="Know Us More"
+                buttonText="Contact Us"
                 zindex={4}
             />
 
@@ -265,7 +265,7 @@ function About() {
                     <div className={styles.header}>
                         <h2 ref={headingRef}>Our Core Values</h2>
                         <div ref={buttonRef}>
-                            <Button text="Explore Our Innovations" arrowSrc="/assets/images/icons/arrow_left.svg" href="/solutions" isWhite={true} />
+                            <Button text="Explore Our Solutions" arrowSrc="/assets/images/icons/arrow_left.svg" href="/solutions" isWhite={true} />
                         </div>
 
                     </div>
