@@ -29,7 +29,6 @@ function Aezonia() {
                             <div className={styles.divText}>
                                 <p>An immersive experience blending entertainment with neuroscience-backed cognitive training.</p>
                                 <p> Enhances mindfulness, decision-making, and focus through adaptive AI.</p>
-                                <Button text="Download Now" arrowSrc="/assets/images/icons/arrow_left.svg" href="/solutions/aezonia" isWhite={false} />
                             </div>
                         </div>
 
