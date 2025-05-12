@@ -57,7 +57,7 @@ function Aezonia() {
                 buttonText="Contact Us"
                 zindex={3}
             />
-            <VideoSec videoSrc={"/assets/images/Aezonia/aezonia_vid.mp4"}
+            <VideoSec videoSrc={"/assets/images/Aezonia/aezonia_vid_official.mp4"}
                 title={"Aezonia offers a fun, engaging, and scientifically-backed way to train the mind"}
                 buttonText={"Collaborate with neuraserv"}
                 buttonhref={"/contact"} />
