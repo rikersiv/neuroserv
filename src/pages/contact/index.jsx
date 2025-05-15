@@ -6,6 +6,9 @@ import Footer from "@/Layout/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -28,14 +31,14 @@ function Contact() {
             });
 
             if (res.ok) {
-                alert("Message sent successfully!");
+                toast.success("Message sent successfully!");
                 form.reset();
             } else {
-                alert("Failed to send message. Please try again.");
+                toast.error("Failed to send message. Please try again.");
             }
         } catch (error) {
             console.error("Error sending message:", error);
-            alert("An error occurred. Please try again later.");
+            toast.error("An error occurred. Please try again later.");
         }
     };
 
@@ -104,6 +107,7 @@ function Contact() {
                 </div>
             </div>
             <Footer />
+            <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         </div>
     );
 }
