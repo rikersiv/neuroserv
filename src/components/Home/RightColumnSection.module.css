@@ -137,4 +137,8 @@
         width: 100%;
     }
 
+    .gridContainer p{
+        margin-top: 0;
+    }
+
 }

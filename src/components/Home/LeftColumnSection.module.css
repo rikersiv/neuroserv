@@ -147,7 +147,8 @@
         font-size: 1.2rem;
     }
 
-    /* .linePath{
-        top: 5%;
-    } */
+    .gridContainer p{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
