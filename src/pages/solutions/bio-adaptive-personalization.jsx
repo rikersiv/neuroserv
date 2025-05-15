@@ -7,7 +7,7 @@ import Header from "@/Layout/Header";
 import Head from "next/head";
 import React from "react";
 
-function ContinuousTesting() {
+function BioAdaptivePersonalization() {
     return (
         <>
             <Head>
@@ -20,7 +20,7 @@ function ContinuousTesting() {
                     description={"Neural-responsive technology that dynamically evolves with your cognitive architecture"}
                     bgPath={'personalization.mp4'}
                 />
-                <FlexSection
+                 <FlexSection
                     header={"Bio-Adaptive Intelligence"}
                     description={"neuroserv's core technology leverages sophisticated bio-adaptive systems across our portfolio of companies, creating experiences that intuitively respond to each user's unique cognitive patterns. Beginning with Limitless You Games and their flagship product Aezonia, our proprietary algorithms analyze neural responses in real-time, continuously refining the experience to maintain optimal engagement."}
                     imgPath={"personalization-1.jpg"}
@@ -50,4 +50,4 @@ function ContinuousTesting() {
     );
 }
 
-export default ContinuousTesting;
+export default BioAdaptivePersonalization;
