@@ -76,11 +76,6 @@ function Team() {
             image: "/assets/images/Team/3.jpg",
         },
         {
-            name: "Anne-Sophie",
-            position: "CSO, Aezonia",
-            image: "/assets/images/Team/4.jpg",
-        },
-        {
             name: "Mike Luard",
             position: "Lead 3D Artist",
             image: "/assets/images/Team/5.jpg",
@@ -101,7 +96,7 @@ function Team() {
                                 <h3>{member.name}</h3>
                                 <p>{member.position}</p>
                             </div>
-                            <Image src="/assets/images/icons/arrow_left.svg" alt="arrow" width={50} height={20} className={styles.arrowIcon} />
+                            {/* <Image src="/assets/images/icons/arrow_left.svg" alt="arrow" width={50} height={20} className={styles.arrowIcon} /> */}
                         </div>
                     ))}
                 </div>

@@ -5,9 +5,15 @@ import NewsList from "@/components/News/NewsList";
 import Button from "@/components/CTAs/Button";
 import Footer from "@/Layout/Footer";
 import Image from "next/image";
+import Head from "next/head";
 
 function News() {
     return (
+        <>
+        <Head>
+            <title>Neuraserv | News</title>
+            <meta name="description" content="Stay updated with the latest news and updates from Neuraserv. Explore our latest projects, innovations, and insights into the future of technology." />
+        </Head>
         <div>
             <Header iswhite={true}/>
             <div className={styles.newsContainer}>
@@ -21,6 +27,7 @@ function News() {
             </div>
             <Footer />
         </div>
+        </>
     )
 }
 

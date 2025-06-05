@@ -13,10 +13,10 @@ const useScrollAnimation = () => {
     const aboutRefs = useRef([]);
     const videoRef = useRef(null);
     const overlayRef = useRef(null);
-    const newsHeaderRef = useRef(null);
-    const newsButtonRef = useRef(null);
-    const newsSectionRef = useRef(null);
-    const newsListRef = useRef(null);
+    // const newsHeaderRef = useRef(null);
+    // const newsButtonRef = useRef(null);
+    // const newsSectionRef = useRef(null);
+    // const newsListRef = useRef(null);
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -27,10 +27,10 @@ const useScrollAnimation = () => {
         const aboutItems = aboutRefs.current;
         const video = videoRef.current;
         const overlay = overlayRef.current;
-        const newsHeader = newsHeaderRef.current;
-        const newsButton = newsButtonRef.current;
-        const newsSection = newsSectionRef.current;
-        const newsList = newsListRef.current;
+        // const newsHeader = newsHeaderRef.current;
+        // const newsButton = newsButtonRef.current;
+        // const newsSection = newsSectionRef.current;
+        // const newsList = newsListRef.current;
 
         gsap.set(logo, { scale: 0.3, opacity: 0 });
 
@@ -88,52 +88,52 @@ const useScrollAnimation = () => {
             });
         });
 
-        gsap.set([newsHeader, newsButton, newsList], { opacity: 0 });
+        // gsap.set([newsHeader, newsButton, newsList], { opacity: 0 });
 
-        gsap.fromTo(newsHeader, {
-            x: -100,
-            opacity: 0
-        }, {
-            x: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: newsSection,
-                start: "top 50%",
-                toggleActions: "play none none reverse"
-            }
-        });
+        // gsap.fromTo(newsHeader, {
+        //     x: -100,
+        //     opacity: 0
+        // }, {
+        //     x: 0,
+        //     opacity: 1,
+        //     duration: 1,
+        //     ease: "power3.out",
+        //     scrollTrigger: {
+        //         trigger: newsSection,
+        //         start: "top 50%",
+        //         toggleActions: "play none none reverse"
+        //     }
+        // });
 
-        gsap.fromTo(newsButton, {
-            x: 100,
-            opacity: 0
-        }, {
-            x: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: newsSection,
-                start: "top 50%",
-                toggleActions: "play none none reverse"
-            }
-        });
+        // gsap.fromTo(newsButton, {
+        //     x: 100,
+        //     opacity: 0
+        // }, {
+        //     x: 0,
+        //     opacity: 1,
+        //     duration: 1,
+        //     ease: "power3.out",
+        //     scrollTrigger: {
+        //         trigger: newsSection,
+        //         start: "top 50%",
+        //         toggleActions: "play none none reverse"
+        //     }
+        // });
 
-        gsap.fromTo(newsList, {
-            y: 100,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: newsSection,
-                start: "top 10%",
-                toggleActions: "play none none reverse"
-            }
-        });
+        // gsap.fromTo(newsList, {
+        //     y: 100,
+        //     opacity: 0
+        // }, {
+        //     y: 0,
+        //     opacity: 1,
+        //     duration: 1,
+        //     ease: "power3.out",
+        //     scrollTrigger: {
+        //         trigger: newsSection,
+        //         start: "top 10%",
+        //         toggleActions: "play none none reverse"
+        //     }
+        // });
 
         ScrollTrigger.create({
             trigger: section,
@@ -165,16 +165,17 @@ const useScrollAnimation = () => {
             pinSpacing: false
         });
 
-        ScrollTrigger.create({
-            trigger: newsSection,
-            start: "bottom bottom",
-            pin: true,
-            pinSpacing: false
-        });
+        // ScrollTrigger.create({
+        //     trigger: newsSection,
+        //     start: "bottom bottom",
+        //     pin: true,
+        //     pinSpacing: false
+        // });
 
     }, []);
 
-    return { sectionRef, gridLogoRef, textRef, offerRefs, aboutRefs, aboutSecRef, videoRef, overlayRef, newsHeaderRef, newsButtonRef, newsSectionRef, newsListRef };
+    return { sectionRef, gridLogoRef, textRef, offerRefs, aboutRefs, aboutSecRef, videoRef, overlayRef }; 
+    // newsHeaderRef, newsButtonRef, newsSectionRef, newsListRef
 };
 
 export default useScrollAnimation;

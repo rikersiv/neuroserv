@@ -54,13 +54,13 @@ function Header({ iswhite, logoRef, menuIconRef }) {
                         <Link href="/">Home</Link>
                         <Link href="/about">About Us</Link>
                         <Link href="/solutions">Solutions</Link>
-                        <Link href="/news">News</Link>
+                        {/* <Link href="/news">News</Link> */}
                     </div>
                 </div>
 
-                <div className={styles.menu_footer}>
+                {/* <div className={styles.menu_footer}>
                     <div>
-                        {/* <p>ENGLISH / <small>OTHER</small></p> */}
+                        <p>ENGLISH / <small>OTHER</small></p>
                     </div>
                     <div className={styles.socials}>
                         {socials.map((social, index) => (
@@ -69,7 +69,7 @@ function Header({ iswhite, logoRef, menuIconRef }) {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </>

@@ -19,7 +19,7 @@ function Home() {
   const menuIconRef = useRef(null);
   const bannerContentRef = useRef(null);
   useLogoAnimation(logoRef, menuIconRef, bannerContentRef);
-  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs, newsHeaderRef, newsButtonRef, newsSectionRef, newsListRef } = useScrollAnimation();
+  const { sectionRef, gridLogoRef, textRef, offerRefs, aboutSecRef, aboutRefs } = useScrollAnimation();
 
   const offers = [
     {
@@ -138,7 +138,7 @@ mental agility.<br/><br/>AI personalization through adventure and fun ensures ev
           buttonText={"Contact Us"}
           buttonhref={"/contact"} />
 
-        <div className={styles.newsContainer} ref={newsSectionRef}>
+        {/* <div className={styles.newsContainer} ref={newsSectionRef}>
 
           <Image src="/assets/images/icons/logo_outline.svg" alt="logo" width={500} height={800} className={styles.logoOutline} />
           <div className={styles.newsWrapper}>
@@ -152,7 +152,7 @@ mental agility.<br/><br/>AI personalization through adventure and fun ensures ev
               <NewsList />
             </div>
           </div>
-        </div>
+        </div> */}
         <Footer />
       </div>
     </>

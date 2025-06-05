@@ -6,6 +6,7 @@ import Link from "next/link";
 import Button from "@/components/CTAs/Button";
 import NewsList from "@/components/News/NewsList";
 import Footer from "@/Layout/Footer";
+import Head from "next/head";
 
 function AezoniaLaunch() {
 
@@ -17,6 +18,10 @@ function AezoniaLaunch() {
 
     return (
         <>
+            <Head>
+                <title>Neuraserv | Aezonia Launch</title>
+                <meta name="description" content="Neuraserv proudly announces the launch of Aezonia, its groundbreaking cognitive gaming platform that merges neuroscience, AI, and immersive storytelling to create an unparalleled mental enhancement experience." />
+            </Head>
             <Header iswhite={true} />
             <div className={styles.newsMainContainer}>
                 <div className={styles.newsContent}>

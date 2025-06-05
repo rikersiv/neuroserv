@@ -15,7 +15,7 @@ function Footer() {
     const logoRef = useRef(null);
     const logoRefMobile = useRef(null);
     const innerContentLeftRef = useRef(null);
-    const innerContentRightRef = useRef(null);
+    // const innerContentRightRef = useRef(null);
     const bottomRef = useRef(null);
     const innerContentTopRef = useRef(null);
 
@@ -69,11 +69,11 @@ function Footer() {
                 { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
                 "-=0.8"
             )
-            .fromTo(innerContentRightRef.current,
-                { x: 100, opacity: 0 },
-                { x: 0, opacity: 1, duration: 1, ease: "power2.out" },
-                "-=0.8"
-            )
+            // .fromTo(innerContentRightRef.current,
+            //     { x: 100, opacity: 0 },
+            //     { x: 0, opacity: 1, duration: 1, ease: "power2.out" },
+            //     "-=0.8"
+            // )
             .fromTo(bottomRef.current,
                 { y: 100, opacity: 0 },
                 { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
@@ -95,7 +95,7 @@ function Footer() {
                                 <p>Let&apos;s shape the future of cognitive enhancement together. Reach out and be part of the movement.</p>
                                 <Button text="Join Our Journey" arrowSrc="/assets/images/icons/arrow_left.svg" href="/contact" isWhite={true} />
                             </div>
-                            <div ref={innerContentRightRef}>
+                            {/* <div ref={innerContentRightRef}>
                                 <p>+1 (123) 456-7890</p>
                                 <p>contact@neuraserv.com</p>
                                 <div className={styles.socials}>
@@ -105,7 +105,7 @@ function Footer() {
                                         </Link>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div ref={logoRefMobile} className={styles.footerLogoHalf}>
                                 <Image src="/assets/images/icons/footer_logo_half.png" alt="logo" width={300} height={50} />
@@ -124,10 +124,10 @@ function Footer() {
 
                     <div className={styles.copyright}>
                         <p>© Copyright 2025 - neuraserv</p>
-                        <div className={styles.copyright_links}>
+                        {/* <div className={styles.copyright_links}>
                             <Link href="/">Privacy Policy</Link>
                             <Link href="/">Terms of Service</Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
